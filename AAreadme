@@ -1,0 +1,8 @@
+step:
+0. make change to run_pnfam.py			--> correct deformation, N, Z, force_parity.
+1. sbatch slurm_dogwood_debug.sh    		--> create 401 jobs under ..../hfb_solns/hfb_meta/       
+2. python lpfam_run.py				--> empty 401 jobs, leave 401 dir
+3. make change to lpfam_generate.py		--> correct operator OTLK
+4. python lpfam_generate.py			--> generate corresponding qrpa.inp for each job
+5. make change to slurm_dogwood_2112.sh		--> correct names on dogwood
+6. sbatch slurm_dogwood_2112.sh			--> submit all jobs
